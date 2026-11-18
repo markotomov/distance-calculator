@@ -9,6 +9,10 @@ public class calc extends JDialog {
     private JButton Calculate;
     private JTextField Scale;
     private JTextField textField1;
+    private JPanel result;
+    private JLabel scale;
+    private JLabel distance;
+    private JLabel result1;
 
 
     public calc() {
@@ -24,8 +28,9 @@ public class calc extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
-        dispose();
+        double distance = Double.parseDouble(textField1.getText());
+        double Scale2 = Double.parseDouble(Scale.getText());
+        result1.setText(distance*Scale2/100000+"km");
     }
 
     public static void main(String[] args) {
